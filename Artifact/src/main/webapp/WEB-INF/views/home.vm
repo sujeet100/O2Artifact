@@ -1,0 +1,7 @@
+Welcome ....  This is a Secured Home page..You must be authorized before you can see this.
+
+<table >
+	<tr>
+		<td> <a href="#springUrl('/logout.do')">Logout</a></td>
+    </tr>
+</table>
