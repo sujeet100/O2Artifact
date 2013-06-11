@@ -1,4 +1,4 @@
-package com.config;
+package maverick.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
@@ -11,14 +11,9 @@ import org.springframework.stereotype.Controller;
 
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan(basePackages = "com", 
-				excludeFilters={@Filter(value=MvcConfiguration.class, type=FilterType.ASSIGNABLE_TYPE), @Filter(value=Controller.class)})
+@ComponentScan(basePackages = "maverick", 
+				excludeFilters={@Filter(value=WebConfiguration.class, type=FilterType.ASSIGNABLE_TYPE), @Filter(value=Controller.class)})
 @ImportResource( { "classpath:spring-security.xml" } )
 @PropertySource({"application.properties"})
-
-
-public class AppConfiguration {
-
-	
-	
+public class ApplicationConfiguration {
 }

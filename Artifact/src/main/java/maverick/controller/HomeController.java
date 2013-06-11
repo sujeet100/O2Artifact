@@ -1,4 +1,4 @@
-package com.controller;
+package maverick.controller;
 
 import java.io.IOException;
 
@@ -17,7 +17,5 @@ public class HomeController {
 			throws IOException {
 		
 		return new ModelAndView("home");
-	}
-
-	
+	}	
 }

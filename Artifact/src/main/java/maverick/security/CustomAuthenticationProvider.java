@@ -1,4 +1,4 @@
-package com.security;
+package maverick.security;
 
 import java.util.ArrayList;
 
@@ -12,15 +12,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-
 	@Override
 	public Authentication authenticate(Authentication authentication)
 			throws AuthenticationException {
-
 		return new UsernamePasswordAuthenticationToken(
 				authentication.getPrincipal(), authentication.getCredentials(),
 				new ArrayList<GrantedAuthority>());
-
 	}
 
 	@Override

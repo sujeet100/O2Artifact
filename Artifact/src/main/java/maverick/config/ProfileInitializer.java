@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.config;
+package maverick.config;
 
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.web.context.ConfigurableWebApplicationContext;

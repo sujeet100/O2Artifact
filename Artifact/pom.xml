@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com</groupId>
-	<artifactId>MyApp</artifactId>
+	<groupId>maverick</groupId>
+	<artifactId>spring-velocity</artifactId>
 	<version>0.0.1</version>
 	<packaging>war</packaging>
-	<description>O2 custom Archetype for Spring MVC using annotations with Velocity and spring security </description>
+	<description>Archetype for Spring MVC using annotations, Velocity, spring security </description>
 
-	<name>O2Archetype</name>
+	<name>${project.artifactId}</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -25,7 +25,6 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
 
 		<!-- Required for velocity configurer class -->
 		<dependency>
@@ -43,15 +42,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${spring.version}</version>
-			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
-			<type>jar</type>
 			<scope>test</scope>
 		</dependency>
 
@@ -122,13 +118,12 @@
 			<version>2.0</version>
 		</dependency>
 
-
-
 		<!-- Jackson JSON Mapper -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.12</version>
+			<scope>runtime</scope>
 		</dependency>
 		
 		<!--  Dependencies for slf4j -->
@@ -185,9 +180,6 @@
             <version>1.7.5</version>
             <scope>runtime</scope>
         </dependency>
-		
-		
-
 	</dependencies>
 
 	<repositories>

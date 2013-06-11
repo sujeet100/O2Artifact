@@ -1,4 +1,6 @@
-package com.config;
+package maverick.config;
+
+import maverick.security.CustomAuthenticationProvider;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,16 +15,14 @@ import org.springframework.web.servlet.view.velocity.VelocityConfig;
 import org.springframework.web.servlet.view.velocity.VelocityConfigurer;
 import org.springframework.web.servlet.view.velocity.VelocityViewResolver;
 
-import com.security.CustomAuthenticationProvider;
-
 @Configuration
-@ComponentScan(basePackages = "com", excludeFilters = {
+@ComponentScan(basePackages = "maverick", excludeFilters = {
 		@Filter(value = Service.class),
 		@Filter(value = Repository.class),
 		@Filter(value = CustomAuthenticationProvider.class, type = FilterType.ASSIGNABLE_TYPE),
-		@Filter(value = AppConfiguration.class, type = FilterType.ASSIGNABLE_TYPE) })
+		@Filter(value = ApplicationConfiguration.class, type = FilterType.ASSIGNABLE_TYPE) })
 @EnableWebMvc
-public class MvcConfiguration {
+public class WebConfiguration {
 
 	@Bean
 	public VelocityConfig velocityConfig() {
